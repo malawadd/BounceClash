@@ -38,6 +38,7 @@
     scoreText: false
     timerDuration: false
     timerText: false
+    turnBasedManager: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -50,6 +51,7 @@
     - MoveTowardsPlayer: !<reference.ScriptComponent[]>
         []
       StartButton: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      turnBasedManager: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       npcs: !<reference.SceneObject[]>
         []
       npcPoints: !<int[]>

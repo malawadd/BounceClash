@@ -1,5 +1,6 @@
 //@input Component.ScriptComponent[] MoveTowardsPlayer
 //@input Component.Text StartButton
+//@input Component.ScriptComponent turnBasedManager  
 
 // NPCFallScore_Multi_PerNPC.js
 // Gives points when any NPC in a list falls below a certain Y level
@@ -42,7 +43,7 @@
 
 // }
 
-// script.api.startGame = startGame;  // expose it
+// script.startGame = startGame;  // expose it
 
 
 
@@ -63,9 +64,9 @@
 // //     script.createEvent("UpdateEvent").bind(onUpdate);
 
 // //     // Expose API so other scripts can change the score
-// //     script.api.addPoints = addPoints;
-// //     script.api.setScore = setScore;
-// //     script.api.getScore = function () {
+// //     script.addPoints = addPoints;
+// //     script.setScore = setScore;
+// //     script.getScore = function () {
 // //         return currentScore;
 // //     };
 // // }
@@ -195,22 +196,22 @@
 //     script.createEvent("UpdateEvent").bind(onUpdate);
 
 //     // Expose API to other scripts (score)
-//     script.api.addPoints = addPoints;
-//     script.api.setScore = setScore;
-//     script.api.getScore = function () { return currentScore; };
+//     script.addPoints = addPoints;
+//     script.setScore = setScore;
+//     script.getScore = function () { return currentScore; };
 
 //     // Expose API to other scripts (timer)
-//     script.api.startTimer = startTimer;            // startTimer(seconds?) – see below
-//     script.api.resetTimer = resetTimer;
-//     script.api.getTimeRemaining = function () { return timeRemaining; };
-//     script.api.setTimerDuration = function (seconds) {
+//     script.startTimer = startTimer;            // startTimer(seconds?) – see below
+//     script.resetTimer = resetTimer;
+//     script.getTimeRemaining = function () { return timeRemaining; };
+//     script.setTimerDuration = function (seconds) {
 //         script.timerDuration = seconds;
 //         if (!timerRunning && !isGameOver) {
 //             timeRemaining = seconds;
 //             updateTimerText();
 //         }
 //     };
-//     script.api.isGameOver = function () { return isGameOver; };
+//     script.isGameOver = function () { return isGameOver; };
 
 //     // Auto‑start timer on lens start if enabled
 //     if (script.autoStartTimer) {
@@ -308,7 +309,7 @@
 //         script.gameOverText.text = "";
 //     }
 // }
-// script.api.startTimer = startTimer;  // expose it
+// script.startTimer = startTimer;  // expose it
 
 // function resetTimer() {
 //     isGameOver = false;
@@ -397,6 +398,8 @@
 
 // ---------- INTERNAL STATE ----------
 
+
+
 var currentScore = script.score;
 // hasFallen[i] tracks if npcs[i] is currently considered "fallen"
 var hasFallen = [];
@@ -429,7 +432,7 @@ function startGame() {
     startTimer(); // uses current timerDuration
 }
 
-script.api.startGame = startGame;  // Expose startGame to other scripts / UI
+script.startGame = startGame;  // Expose startGame to other scripts / UI
 
 // ---------- INIT ----------
 
@@ -452,22 +455,22 @@ function init() {
     script.createEvent("UpdateEvent").bind(onUpdate);
 
     // Expose API to other scripts (score)
-    script.api.addPoints = addPoints;
-    script.api.setScore = setScore;
-    script.api.getScore = function () { return currentScore; };
+    script.addPoints = addPoints;
+    script.setScore = setScore;
+    script.getScore = function () { return currentScore; };
 
     // Expose API to other scripts (timer)
-    script.api.startTimer = startTimer;   // startTimer(seconds?) – see below
-    script.api.resetTimer = resetTimer;
-    script.api.getTimeRemaining = function () { return timeRemaining; };
-    script.api.setTimerDuration = function (seconds) {
+    script.startTimer = startTimer;   // startTimer(seconds?) – see below
+    script.resetTimer = resetTimer;
+    script.getTimeRemaining = function () { return timeRemaining; };
+    script.setTimerDuration = function (seconds) {
         script.timerDuration = seconds;
         if (!timerRunning && !isGameOver) {
             timeRemaining = seconds;
             updateTimerText();
         }
     };
-    script.api.isGameOver = function () { return isGameOver; };
+    script.isGameOver = function () { return isGameOver; };
 
     // Auto‑start timer on lens start if enabled
     if (script.autoStartTimer) {
@@ -605,6 +608,13 @@ function onGameOver() {
         script.gameOverText.text = "Game Over";
     } else {
         print("[Game] Game Over");
+    }
+
+   
+    if (script.turnBasedManager &&
+        script.turnBasedManager &&
+        script.turnBasedManager.onLocalRoundFinished) {
+        script.turnBasedManager.onLocalRoundFinished(currentScore);
     }
 }
 

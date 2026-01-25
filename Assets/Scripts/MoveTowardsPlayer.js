@@ -14,7 +14,7 @@ function startGame() {
 
 }
 
-script.api.startGame = startGame;  // expose it
+script.startGame = startGame;  // expose it
 
 // --- Input sanity check ---
 if (!script.sphere) {
