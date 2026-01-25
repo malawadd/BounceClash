@@ -13,6 +13,8 @@
     - !<own> 2ab8f963-4fd2-4ea9-8c45-66faa3faf908
     - !<own> 1eff1548-9b7c-4a30-afbe-51cf4c84b121
     - !<own> a47fed37-ed88-4014-a048-aa2b1e0e99f6
+    - !<own> 0ba1053c-10b9-46e9-b071-21ad3b69bf36
+    - !<own> 59121da2-cd16-49e3-af19-13693289dfa1
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -256,6 +258,21 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<SceneObject/0ba1053c-10b9-46e9-b071-21ad3b69bf36>
+  PrefabRemaps:
+    []
+  Name: Turn Based Player Info
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> bdfeaaf0-098f-43ba-8048-5fe932a0a25f
 - !<SceneObject/0d47e36c-7d22-47db-9071-9a31ce4de861>
   PrefabRemaps:
     []
@@ -665,6 +682,23 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/3723f9c9-0f3b-4e2b-97d0-3f55f9a6d2d4>
+  PrefabRemaps:
+    []
+  Name: TurnBasedManager
+  Enabled: true
+  ScriptAsset: !<reference> 95629219-da59-41a4-ad4e-8ccbab4e555b
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      turnBased: !<reference.ScriptComponent> ad034f6a-3cd3-4888-a2b5-0f965d879534
+      gameController: !<reference.ScriptComponent> b51824a2-dd8d-4656-b58c-75e974705d9a
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/3e883406-dc7e-4a46-a3d3-d3cfaa7b76e6>
   PrefabRemaps:
     []
@@ -750,6 +784,22 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/59121da2-cd16-49e3-af19-13693289dfa1>
+  PrefabRemaps:
+    []
+  Name: Turn Based
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ad034f6a-3cd3-4888-a2b5-0f965d879534
+    - !<own> 3723f9c9-0f3b-4e2b-97d0-3f55f9a6d2d4
 - !<ScriptComponent/599ea521-2a31-486d-b36a-1cb23fc03362>
   PrefabRemaps:
     []
@@ -1726,6 +1776,119 @@
   DepthFilter: true
   MeshVisuals:
     []
+- !<ScriptComponent/ad034f6a-3cd3-4888-a2b5-0f965d879534>
+  PrefabRemaps:
+    []
+  Name: Turn Based
+  Enabled: true
+  ScriptAsset: !<reference> 2485c892-b1f1-4924-9453-ce440bd2cdfb
+  ScriptInputsDefault:
+    requireTurnSubmission: true
+    allowChangingTurnVariablesAfterTurnSubmission: true
+    turnLimitInput: true
+    autoRestoreTurn: true
+    user1FlowObjectsInputSO: true
+    user2FlowObjectsInputSO: true
+    gameOverObjectsInputSO: true
+    debugMode: true
+    swapPlayersAfterSimulatedTurn: true
+    debugTappedKeySimulateTurn: true
+    debugTurnCount: true
+    debugTappedKeySingleTurn: true
+    testDataType: true
+    debugIsTurnComplete: true
+    debugIsTurnRestoredFromCache: true
+    debugAssociatedDataStudioInputs: true
+    debugTurnHistoryStudioInputs: true
+    debugAssociatedDataString: true
+    debugTurnHistoryStrings: true
+    printLogsInput: true
+    loggerConfig: true
+    showDebugView: true
+    _advancedOptions: true
+    defaultTurnVariables: true
+    remoteServiceModule: true
+    autoCaptureHelper: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      requireTurnSubmission: true
+      allowChangingTurnVariablesAfterTurnSubmission: false
+      useTurnLimit: true
+      turnLimitInput: 2
+      useTurnHistory: true
+      turnsSavedLimitInput: 2
+      autoRestoreTurn: false
+      tappableAreasInput:
+        - key: StartButton
+          screenTransform: !<reference.ScreenTransform> 43fb210a-a1bb-4c23-8517-5d3f4681eec8
+      user1FlowObjectsInputSO: !<reference.SceneObject[]>
+        []
+      user2FlowObjectsInputSO: !<reference.SceneObject[]>
+        []
+      gameOverObjectsInputSO: !<reference.SceneObject[]>
+        []
+      debugMode: Simulate Turns
+      swapPlayersAfterSimulatedTurn: true
+      debugTappedKeySimulateTurn: ""
+      debugTurnCount: 0
+      debugTappedKeySingleTurn: ""
+      testDataType: Studio Inputs
+      debugIsTurnComplete: false
+      debugIsTurnRestoredFromCache: false
+      debugAssociatedDataStudioInputs:
+        []
+      debugTurnHistoryStudioInputs:
+        - variables:
+            []
+          isTurnComplete: false
+      debugAssociatedDataString: '{"key1": "value1", "key2":0}'
+      debugTurnHistoryStrings:
+        []
+      _onTurnStartResponses:
+        - responseType: 0
+          componentApiResponseConfig:
+            component: !<reference.ScriptComponent> 3723f9c9-0f3b-4e2b-97d0-3f55f9a6d2d4
+            methodName: startRound
+          behaviorResponseConfig:
+            behaviorResponseType: 0
+            customTriggerName: ""
+            behaviorScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      _onTurnEndResponses:
+        - responseType: 0
+          componentApiResponseConfig:
+            component: !<reference.ScriptComponent> 3723f9c9-0f3b-4e2b-97d0-3f55f9a6d2d4
+            methodName: onTurnEndDebug
+          behaviorResponseConfig:
+            behaviorResponseType: 0
+            customTriggerName: ""
+            behaviorScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      _onGameOverResponses:
+        - responseType: 0
+          componentApiResponseConfig:
+            component: !<reference.ScriptComponent> 3723f9c9-0f3b-4e2b-97d0-3f55f9a6d2d4
+            methodName: onGameOverDebug
+          behaviorResponseConfig:
+            behaviorResponseType: 0
+            customTriggerName: ""
+            behaviorScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      printLogsInput: false
+      loggerConfig:
+        printOnScreen: false
+        fontSize: !<float> 12.000000
+        printErrors: true
+        printWarnings: true
+        printInfoLogs: false
+      showDebugView: false
+      _advancedOptions: false
+      defaultTurnVariables:
+        []
+      remoteServiceModule: !<reference.RemoteServiceModule> 53134e89-9460-4d35-b990-7708cd763b62
+      autoCaptureHelper: !<reference.ScriptAsset> f6c679e6-a4e6-4760-86bb-4836099db786
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/aef7756d-5a20-41bb-916b-113f263280a8>
   PrefabRemaps:
     []
@@ -1794,7 +1957,6 @@
   ScriptInputsDefault:
     score: true
     pointsPerFall: true
-    timerDuration: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1803,6 +1965,7 @@
         - !<reference> 0034f6e4-b7d6-4285-a079-4a1794a14269
         - !<reference> 6e56bc7e-b126-437e-b4d2-b2d46fba02c8
       StartButton: !<reference.Text> 6044a383-0b44-4c18-8244-85b39519498f
+      turnBasedManager: !<reference.ScriptComponent> 3723f9c9-0f3b-4e2b-97d0-3f55f9a6d2d4
       npcs: !<reference.SceneObject[]>
         - !<reference> 25da596f-99d6-4fc6-af5f-f7d60f1bef1c
         - !<reference> c3425233-a185-4fdc-930b-cc3d9266321b
@@ -1813,7 +1976,7 @@
       score: 0
       pointsPerFall: 1
       scoreText: !<reference.Text> 5d03e450-9574-4c3e-a533-4a803afc1888
-      timerDuration: !<float> 20.000000
+      timerDuration: !<float> 5.000000
       autoStartTimer: false
       timerText: !<reference.Text> cd549ecf-dd47-4bce-b82b-dcdd458685c5
       gameOverText: !<reference.Text> d5265ec6-994d-4cf8-8aa3-cd9314f2895c
@@ -1932,6 +2095,57 @@
   BodySettingValue: 108.000000
   Damping: 0.410000
   AngularDamping: 0.530000
+- !<ScriptComponent/bdfeaaf0-098f-43ba-8048-5fe932a0a25f>
+  PrefabRemaps:
+    []
+  Name: Turn Based Player Info
+  Enabled: true
+  ScriptAsset: !<reference> 8a7bdc69-76bf-461f-853b-ff2dce8f38b3
+  ScriptInputsDefault:
+    targetUser: true
+    useBitmoji3D: true
+    useBitmojiSticker: true
+    bitmojiStickerConfigInputs: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      turnBased: !<reference.ScriptComponent> ad034f6a-3cd3-4888-a2b5-0f965d879534
+      targetUser:
+        type: Current
+      useBitmoji3D: true
+      bitmoji3DConfigInputs:
+        bitmojiComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+        autoLoadBitmoji3D: true
+        hideBitmoji3DIfNotFound: true
+      useBitmojiSticker: false
+      bitmojiStickerConfigInputs:
+        stickerType: Selfie
+        stickerId: ""
+        autoLoad: true
+        applyActionInputs:
+          outputType: Image
+          meshVisual: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+          image: !<reference.Image> 00000000-0000-0000-0000-000000000000
+          material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+          showAdvancedOptions: false
+          meshVisualCloneType: CloneOnce
+          materialPropertyName: baseTex
+          meshVisualMaterialIndex: 0
+        fallbackSettings:
+          placeholderTexture: !<reference.Texture> 4bb337af-cf9a-4ab7-b7ad-7796e3e97a14
+          loadingTexture: !<reference.Texture> 4bb337af-cf9a-4ab7-b7ad-7796e3e97a14
+          missingUserTexture: !<reference.Texture> 4bb337af-cf9a-4ab7-b7ad-7796e3e97a14
+      useTextDisplay: true
+      textDisplayConfigInputs:
+        fallbackText: player 1
+        configurableSetTextInputs:
+          targetType: Text
+          text: !<reference.Text> 00000000-0000-0000-0000-000000000000
+          text3D: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/beb7ccd9-77a2-4598-b425-8a1ac32f3171>
   PrefabRemaps:
     []
