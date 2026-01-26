@@ -27,8 +27,13 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     gameController: false
+    gameEndScene: false
+    p1ScoreText: false
+    p2ScoreText: false
+    properGameOverManager: false
     turnBased: false
     turnEndScene: false
+    winnerText: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -38,9 +43,14 @@
   Attachments:
     - !<reference> 2485c892-b1f1-4924-9453-ce440bd2cdfb
   DefaultScriptInputs:
-    - turnBased: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+    - gameEndScene: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      p1ScoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      p2ScoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      winnerText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      turnBased: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       gameController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       turnEndScene: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      properGameOverManager: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

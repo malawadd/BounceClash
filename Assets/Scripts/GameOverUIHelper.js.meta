@@ -1,0 +1,48 @@
+- !<AssetImportMetadata/fc0ea997-e769-4ace-a98e-b61af5dcb2b2>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 821213fe-397d-4209-b2b5-1355b2c298b1
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 821213fe-397d-4209-b2b5-1355b2c298b1
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 318b7fb7-ce21-405d-9c5c-fd6c4fb69d1f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/318b7fb7-ce21-405d-9c5c-fd6c4fb69d1f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 28d6941e-4d20-4159-9737-7f51f494c5d6
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    player1Text: false
+    player2Text: false
+    tweenManager: false
+    winnerText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - player1Text: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      player2Text: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      winnerText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      tweenManager: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
