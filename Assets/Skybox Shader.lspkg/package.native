@@ -1,0 +1,37 @@
+- !<NativePackageDescriptor/2bc447a3-7dda-4345-b472-31a82b0f3fbd>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 17
+    patch: 2
+    build: 26011319
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "This material brings a dynamic skybox to your scene. Simply drag and drop it into your project, attach it to a sphere, and scale it as needed. Adjust the zenith, horizon, and nadir settings, and toggle clouds and stars to create your perfe."
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 83
+  ExportUid: 70c4f6f4-9061-4e7e-8981-28e29db09972
+  ComponentUid: dac301d4-4257-40fb-863f-6011ca1d0b37
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0
