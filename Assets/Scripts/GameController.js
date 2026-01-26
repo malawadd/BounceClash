@@ -50,6 +50,13 @@
 // Optional: Text component to show "Game Over" when time runs out
 // @input Component.Text gameOverText {"label":"Game Over Text", "hint":"Optional"}
 
+//@input SceneObject GameOverScene;
+
+// Turn Based Manager script (on the TurnBasedManager Scene Object)
+//@input Component.ScriptComponent turnBasedManager
+
+//@input Component.Text userScore
+
 
 // ---------- INTERNAL STATE ----------
 
@@ -265,8 +272,14 @@ function onGameOver() {
         print("[Game] Game Over");
     }
 
-    //script.GameOverScene.enabled = true;
+    script.GameOverScene.enabled = true;
 
+        // NEW: show the TurnEndScene when timer hits 0
+    if (script.turnBasedManager && script.turnBasedManager.showTurnEndScene) {
+        script.turnBasedManager.showTurnEndScene();
+    }
+
+    script.userScore.text = "YOUR SCORE: " + currentScore.toString();
    
     if (script.turnBasedManager &&
         script.turnBasedManager &&

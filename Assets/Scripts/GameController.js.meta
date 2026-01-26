@@ -26,6 +26,7 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    GameOverScene: false
     MoveTowardsPlayer: false
     StartButton: false
     autoStartTimer: false
@@ -38,6 +39,8 @@
     scoreText: false
     timerDuration: false
     timerText: false
+    turnBasedManager: false
+    userScore: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -62,6 +65,9 @@
       autoStartTimer: true
       timerText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       gameOverText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      GameOverScene: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      turnBasedManager: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      userScore: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

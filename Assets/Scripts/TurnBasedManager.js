@@ -1,9 +1,22 @@
+// @input SceneObject gameEndScene
+// @input Component.Text p1ScoreText
+// @input Component.Text p2ScoreText
+// @input Component.Text winnerText
+
 
 // Turn Based custom component instance (on the "Turn Based" Scene Object)
 //@input Component.ScriptComponent turnBased
 
 // Your existing GameController ScriptComponent (on the "GameController" Scene Object)
 //@input Component.ScriptComponent gameController
+
+// @input SceneObject turnEndScene
+
+// Reference to the ProperGameOverManager (for final game over screen)
+//@input Component.ScriptComponent properGameOverManager
+
+script.turnEndScene.enabled = false;
+
 
 var TURN_DURATION = 10.0;
 
@@ -16,7 +29,7 @@ function startRound() {
         script.turnBased.getTurnCount().then(function (turnCount) {
             script.turnBased.getCurrentUserIndex().then(function (userIndex) {
                 print("[TurnBased] startRound: turnCount=" + turnCount +
-                      ", currentUserIndex=" + userIndex);
+                    ", currentUserIndex=" + userIndex);
             });
         });
     }
@@ -103,6 +116,13 @@ function onLocalRoundFinished(_) {
 }
 script.onLocalRoundFinished = onLocalRoundFinished;
 
+function showTurnEndScene() {
+    if (script.turnEndScene) {
+        script.turnEndScene.enabled = true;
+    }
+}
+script.showTurnEndScene = showTurnEndScene;
+
 // Debug: log when a turn ends (per-player turn, not whole game)
 function onTurnEndDebug() {
     if (!script.turnBased) {
@@ -111,66 +131,64 @@ function onTurnEndDebug() {
 
     // getTurnCount() is async, getScore() is sync
     if (typeof script.turnBased.getTurnCount === "function") {
-        script.turnBased.getTurnCount().then(function(turnCount) {
+        script.turnBased.getTurnCount().then(function (turnCount) {
             var score = null;
             if (typeof script.turnBased.getScore === "function") {
                 score = script.turnBased.getScore();
             }
             print("[TurnBased] TurnEnd: turnCount=" + turnCount + ", score=" + score);
-        }).catch(function(e) {
+            // Show turn-end UI
+            // if (script.turnEndScene) {
+            //     script.turnEndScene.enabled = true;
+            // }
+
+
+
+        }).catch(function (e) {
             print("[TurnBased] TurnEnd debug error in getTurnCount: " + e);
         });
     } else {
         print("[TurnBased] TurnEnd debug: getTurnCount() not available");
     }
 }
-script.onTurnEndDebug = onTurnEndDebug;
-
-// Debug: log full history and winner when the game is over
+// Called when the entire game is over (all turns completed)
+// This will show the final game over screen with both players' total scores and winner
 function onGameOverDebug() {
-    if (!script.turnBased || !script.gameController || !script.gameController) {
-        print("[TurnBased] GameOver debug: missing components");
+    if (!script.turnBased || !script.gameController) {
+        print("[TurnBased] GameOver: missing components");
         return;
     }
 
-    // 1) Get current user's score from GameController (the UI score)
+    // Current player's final score from GameController UI
     var currentScore = 0;
     if (typeof script.gameController.getScore === "function") {
         currentScore = script.gameController.getScore();
     }
-    print("[TurnBased] GameOver: current UI score = " + currentScore);
 
-    // 2) Get current user index and history
     var p0 = 0;
     var p1 = 0;
-
     var turnBased = script.turnBased;
+
     var getHistoryPromise = typeof turnBased.getTurnHistory === "function"
         ? turnBased.getTurnHistory()
         : Promise.resolve([]);
 
     getHistoryPromise.then(function(history) {
-        print("[TurnBased] Full turn history: " + JSON.stringify(history));
-
-        // Sum previous turns
+        // Sum all *completed* turns from history
         for (var i = 0; i < history.length; i++) {
             var entry = history[i];
             var vars = entry.userDefinedGameVariables || {};
             var score = typeof vars.score === "number" ? vars.score : 0;
 
-            // Even turnCount -> user 0, odd -> user 1
+            // Even turnCount -> Player 0, odd -> Player 1
             if (entry.turnCount % 2 === 0) {
                 p0 += score;
             } else {
                 p1 += score;
             }
-
-            print("[TurnBased] Turn " + entry.turnCount +
-                  ": user " + (entry.turnCount % 2) +
-                  " score=" + score);
         }
 
-        // 3) Add the *current* user's final score
+        // Add this device's final score to the correct player
         var getUserIndexPromise = typeof turnBased.getCurrentUserIndex === "function"
             ? turnBased.getCurrentUserIndex()
             : Promise.resolve(0);
@@ -182,18 +200,36 @@ function onGameOverDebug() {
                 p1 += currentScore;
             }
 
-            print("[TurnBased] Totals: Player0=" + p0 + ", Player1=" + p1);
+            print("[TurnBased] Final totals: Player0=" + p0 + ", Player1=" + p1);
 
-            if (p0 > p1) {
-                print("[TurnBased] Winner: Player 0");
-            } else if (p1 > p0) {
-                print("[TurnBased] Winner: Player 1");
-            } else {
-                print("[TurnBased] Result: tie");
+            // Update UI texts
+            if (script.p1ScoreText) {
+                script.p1ScoreText.text = "Player 1: " + p0.toString();
+            }
+            if (script.p2ScoreText) {
+                script.p2ScoreText.text = "Player 2: " + p1.toString();
+            }
+
+            if (script.winnerText) {
+                if (p0 > p1) {
+                    script.winnerText.text = "Winner: Player 1";
+                } else if (p1 > p0) {
+                    script.winnerText.text = "Winner: Player 2";
+                } else {
+                    script.winnerText.text = "It's a tie!";
+                }
+            }
+
+            // Hide per-turn screen and show final game over screen
+            if (script.turnEndScene) {
+                script.turnEndScene.enabled = false;
+            }
+            if (script.gameEndScene) {
+                script.gameEndScene.enabled = true;
             }
         });
     }).catch(function(e) {
-        print("[TurnBased] GameOver debug error: " + e);
+        print("[TurnBased] GameOver error: " + e);
     });
 }
 script.onGameOverDebug = onGameOverDebug;

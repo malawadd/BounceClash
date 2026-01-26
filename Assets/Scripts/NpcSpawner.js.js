@@ -41,7 +41,6 @@ initEvent.bind(function () {
         var template = pickRandomTemplate();
         if (!template || !template.isenabled) {
             // skip disabled / null templates
-            print("NpcSpawner: template at index " + i + " is invalid or disabled, skipping");
             continue;
         }
 
@@ -68,6 +67,4 @@ initEvent.bind(function () {
         script.spawnedNpcs.push(npcCloneRoot);
     }
 
-    print("NpcSpawner: spawned " + script.spawnedNpcs.length + " NPCs from " 
-        + script.npcTemplates.length + " templates");
 });

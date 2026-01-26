@@ -34,8 +34,6 @@ var playerTransform = script.player.getTransform();
 var groundY = rootTransform.getWorldPosition().y;
 var isFalling = false;
 
-print("GameController: initialized on " + rootObj.name);
-
 var updateEvent = script.createEvent("UpdateEvent");
 updateEvent.bind(function () {
     var dt = getDeltaTime();
@@ -47,7 +45,6 @@ updateEvent.bind(function () {
 
     if (!isFalling && rootPos.y < groundY - script.fallThreshold) {
         isFalling = true;
-        print("GameController: switched to falling");
     }
 
     if (isFalling) {
