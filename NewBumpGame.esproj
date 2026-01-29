@@ -13,7 +13,7 @@ metaInfo:
     []
   tags:
     []
-  lensName: Untitled
+  lensName: No Physics Here
   lensDescriptors:
     []
   lensApplicability:
@@ -23,7 +23,7 @@ metaInfo:
     - Mobile
     - Web
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: 26cac2ef463a9ba1b7332959333b370c
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.17.2.26011319

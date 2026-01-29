@@ -26,8 +26,8 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    gameController: false
     interaction: false
+    turnBasedManager: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -38,7 +38,7 @@
     []
   DefaultScriptInputs:
     - interaction: !<reference.InteractionComponent> 00000000-0000-0000-0000-000000000000
-      gameController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      turnBasedManager: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

@@ -53,7 +53,7 @@ function startRound() {
         script.gameController.startGame();
     }
 }
-script.startRound = startRound;
+script.api.startRound = startRound;
 
 // Called by GameController when its local 10s round is finished
 // function onLocalRoundFinished(score) {

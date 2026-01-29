@@ -26,9 +26,11 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    collider: false
     fallSpeed: false
     fallThreshold: false
     player: false
+    soundPlayer: false
     speed: false
     sphere: false
   ScriptTypesHidden:
@@ -45,6 +47,8 @@
       speed: !<float> 50.000000
       fallSpeed: !<float> 300.000000
       fallThreshold: 0.100000
+      collider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+      soundPlayer: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

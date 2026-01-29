@@ -1,0 +1,73 @@
+- !<Material/203bea28-5ba7-44ba-9f58-13a32076868b>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> e881ef52-cd19-4f52-9494-669efccf00aa
+- !<PassInfo/e881ef52-cd19-4f52-9494-669efccf00aa>
+  CachedProperties:
+    []
+  DepthWrite: false
+  DepthTest: false
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: Disabled
+  Properties:
+    Port_Input0_N013:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input0_N015:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N013:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N015:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N020:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N021:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N022:
+      typeIdx: 1
+      value: 0.000000
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    alpha:
+      typeIdx: 1
+      value: 1.000000
+    color1:
+      typeIdx: 5
+      value: {x: 0.000000, y: 0.040000, z: 0.180000, w: 1.000000}
+    color2:
+      typeIdx: 5
+      value: {x: 0.160000, y: 0.210000, z: 0.470000, w: 1.000000}
+    color3:
+      typeIdx: 5
+      value: {x: 0.610000, y: 0.000000, z: 1.000000, w: 1.000000}
+    color4:
+      typeIdx: 5
+      value: {x: 1.000000, y: 0.820000, z: 0.750000, w: 1.000000}
+    screenTexture:
+      typeIdx: 9
+      value:
+        id: 872f0f4a-4987-49dc-9107-bbdd51d69cf1
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: ClampToEdge
+          wrapModeV: ClampToEdge
+          wrapModeW: ClampToEdge
+          borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+          mipmaps: false
+        type: Texture2D
+  Pass: !<reference> b34ac161-e899-438d-893e-45f62c88e581

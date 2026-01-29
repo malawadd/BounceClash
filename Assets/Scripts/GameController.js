@@ -10,7 +10,7 @@
 //@input Component.ScriptComponent[] MoveTowardsPlayer
 
 // Start button text (we'll hide/disable it when the game starts)
-//@input Component.Text StartButton
+
 
 // ---------- NPC / SCORE SETUP ----------
 
@@ -56,6 +56,8 @@
 //@input Component.ScriptComponent turnBasedManager
 
 //@input Component.Text userScore
+//@input Component.Text startButton
+
 
 
 // ---------- INTERNAL STATE ----------
@@ -73,6 +75,20 @@ var isGameOver = false;
 
 // ---------- GAME START BUTTON ----------
 
+// Runs once when the lens starts
+var onStart = script.createEvent("OnStartEvent");
+onStart.bind(function () {
+    // 1) Show START button, hide game UI if needed
+    if (script.startButton) {
+        script.startButton.enabled = true;
+    }
+    
+     script.timerText.getSceneObject().enabled = false;
+     script.scoreText.getSceneObject().enabled = false;
+});
+
+
+
 function startGame() {
     // Enable MoveTowardsPlayer scripts
     if (script.MoveTowardsPlayer) {
@@ -84,11 +100,13 @@ function startGame() {
             sc.enabled = true;
         }
     }
+     script.timerText.getSceneObject().enabled = true;
+     script.scoreText.getSceneObject().enabled = true;
 
     // Disable / hide the start button when game begins
-    if (script.StartButton) {
-        script.StartButton.enabled = false;
-    }
+    // if (script.startButton) {
+    //     script.startButton.enabled = false;
+    // }
 
     // Start the countdown timer
     startTimer(); // uses current timerDuration
@@ -109,6 +127,9 @@ function init() {
     // Init timer
     timeRemaining = script.timerDuration;
     updateTimerText();
+
+     // Init Start Button
+    script.startButton.text = "START"; 
 
     // Init score display
     updateScoreText();
@@ -193,6 +214,8 @@ function onUpdate(eventData) {
         }
     }
 }
+
+
 
 // ---------- SCORE HELPERS ----------
 

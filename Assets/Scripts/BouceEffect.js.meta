@@ -1,0 +1,48 @@
+- !<AssetImportMetadata/eabfaa70-b822-400f-809d-078ffaec3e57>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 71eb6e14-563f-4e98-aae1-81a37b99d12a
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 71eb6e14-563f-4e98-aae1-81a37b99d12a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> d85fe5dc-eb66-4ed1-8c3d-f7fbebdb7a32
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/d85fe5dc-eb66-4ed1-8c3d-f7fbebdb7a32>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e2492f5e-bd16-4563-99a2-82635e4eff00
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bouncyMatter: false
+    initialSpeed: false
+    sphere1Collider: false
+    sphere2Collider: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - sphere1Collider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+      sphere2Collider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+      bouncyMatter: !<reference.Matter> 00000000-0000-0000-0000-000000000000
+      initialSpeed: !<float> 50.000000
+  ScriptTypes:
+    -
+      {}

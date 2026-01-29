@@ -5,6 +5,32 @@
 //@input float speed = 50.0
 //@input float fallSpeed = 300.0
 //@input float fallThreshold = 0.1
+// Drag the Collider component of THIS object into this input in the Inspector
+// @input Component.ColliderComponent collider
+// @input Component.ScriptComponent soundPlayer
+
+// --------- Play Sound ---------------
+
+
+if (!script.collider) {
+    print("CollisionPrint: collider input is not set");
+    playHitSfx(0);
+    return;
+}
+
+function onCollisionEnter(eventArgs) {
+    // collider that we hit
+    var otherCollider = eventArgs.collision.collider;
+    var thisObj = script.getSceneObject();
+    var otherObj = otherCollider ? otherCollider.getSceneObject() : null;
+
+    var thisName = thisObj ? thisObj.name : "Unknown";
+    var otherName = otherObj ? otherObj.name : "Unknown";
+        script.soundPlayer.api.playByIndex(0);
+}
+
+// Subscribe to the event
+script.collider.onCollisionEnter.add(onCollisionEnter);
 
 
 

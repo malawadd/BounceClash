@@ -1,0 +1,37 @@
+- !<NativePackageDescriptor/3f827fa2-72c7-41a4-a093-e42be5ed296b>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 17
+    patch: 2
+    build: 26011319
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "Create stunning and customizable designs with our Tiles Asset Pack. From minimalist designs to bold and colorful creations, you can easily create unique and eye-catching visuals for your Snapchat stories."
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 83
+  ExportUid: 81cacff0-6f65-4998-b9f7-9192f1685b18
+  ComponentUid: 310af8cc-30e2-4750-9d1b-e5004bbda64c
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0
