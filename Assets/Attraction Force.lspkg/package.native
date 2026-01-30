@@ -1,0 +1,37 @@
+- !<NativePackageDescriptor/bcfe8c72-53b7-45a7-810b-8d25025e0522>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 17
+    patch: 2
+    build: 26011319
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: Attraction Force Attraction - repulsion force between two objects or between one main object and many objects.
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 83
+  ExportUid: cd1119a9-f38c-4e78-9160-d816e49c8d5a
+  ComponentUid: 57154642-b782-4abe-928f-a221c5f7b83f
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

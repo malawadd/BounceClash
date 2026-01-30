@@ -14,6 +14,7 @@
 
 // Reference to the ProperGameOverManager (for final game over screen)
 //@input Component.ScriptComponent properGameOverManager
+// @input Component.ScriptComponent soundPlayer
 
 script.turnEndScene.enabled = false;
 
@@ -119,6 +120,8 @@ script.onLocalRoundFinished = onLocalRoundFinished;
 function showTurnEndScene() {
     if (script.turnEndScene) {
         script.turnEndScene.enabled = true;
+
+         script.soundPlayer.api.stopByIndex(1);
     }
 }
 script.showTurnEndScene = showTurnEndScene;

@@ -31,6 +31,7 @@
     p1ScoreText: false
     p2ScoreText: false
     properGameOverManager: false
+    soundPlayer: false
     turnBased: false
     turnEndScene: false
     winnerText: false
@@ -51,6 +52,7 @@
       gameController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       turnEndScene: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       properGameOverManager: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      soundPlayer: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

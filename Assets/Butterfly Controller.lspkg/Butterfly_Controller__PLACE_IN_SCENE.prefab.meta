@@ -1,0 +1,385 @@
+- !<AssetImportMetadata/ddfd248f-6ba9-9d5f-57c5-93e03437a843>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> dffa8c25-71be-4bee-a8a9-b5cd3cde5525
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> dffa8c25-71be-4bee-a8a9-b5cd3cde5525
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: X5FQJmWf60pxs2HWNM7Gt
+  AssetDataMap:
+    ObjectPrefab: !<own> 76f40f0a-4c80-49ff-a719-12800c3598b8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/1472321c-aa73-4e3e-5479-024dc811bf24>
+  PrefabRemaps:
+    []
+  Name: Right Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -27.240053, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5f4b2582-99d7-489b-7652-5c72f554a305
+  Components:
+    []
+- !<RenderMeshVisual/1fd7d2e6-4973-41d1-6d0f-7725e8398cc6>
+  PrefabRemaps:
+    []
+  Name: Mesh Visual 1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0bd56e7e-335b-47bd-ae22-810777868c11
+  Mesh: !<reference> 42cb628d-dbc9-4291-85c6-fb57e2281d80
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/4755ffec-4273-46ce-6612-101418c9db09>
+  PrefabRemaps:
+    []
+  Name: Left Wing
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 7.500000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: -90.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 61c8c6c8-d7c6-47e1-437f-d71ba86f4b09
+- !<SceneObject/56019aa8-b08a-4180-58a4-a8204d89e7c8>
+  PrefabRemaps:
+    []
+  Name: Butterfly_Controller__PLACE_IN_SCENE
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> a81b505c-b694-4c0e-664b-6ed76632206b
+    - !<own> fd3711a1-bff9-4904-532b-c8705bbc20b4
+  Components:
+    - !<own> d715d962-9bb3-4514-59c5-155a0079f961
+- !<SceneObject/5f4b2582-99d7-489b-7652-5c72f554a305>
+  PrefabRemaps:
+    []
+  Name: Right Wing
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 7.500000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: -90.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 89d2e8f3-04fa-44fc-7f80-e9cceda256d0
+- !<RenderMeshVisual/61c8c6c8-d7c6-47e1-437f-d71ba86f4b09>
+  PrefabRemaps:
+    []
+  Name: Mesh Visual 1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: Caster
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 3f080cb7-8706-4837-9ce8-fdc7005e84d0
+  Mesh: !<reference> 42cb628d-dbc9-4291-85c6-fb57e2281d80
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/628a27d8-12cc-4586-5271-00393f6c42ef>
+  PrefabRemaps:
+    []
+  Name: Mesh Visual 1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0bd56e7e-335b-47bd-ae22-810777868c11
+  Mesh: !<reference> 42cb628d-dbc9-4291-85c6-fb57e2281d80
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/69a9fef7-a1ed-426d-7962-2f4a3ded0f02>
+  PrefabRemaps:
+    []
+  Name: Butterfly
+  Enabled: true
+  ScriptAsset: !<reference> 37eb7bd3-a017-489f-b7dd-36b2597c1ef7
+  ScriptInputsDefault:
+    addWingMovement: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      addWingMovement: true
+      wingLeft: !<reference.RenderMeshVisual> 61c8c6c8-d7c6-47e1-437f-d71ba86f4b09
+      wingRight: !<reference.RenderMeshVisual> 89d2e8f3-04fa-44fc-7f80-e9cceda256d0
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/74e31acf-55c0-4a11-7f69-c959ddc72eae>
+  PrefabRemaps:
+    []
+  Name: Scale Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> ac9a09c8-a2d6-459c-64d7-cda5fcd1b141
+    - !<own> 1472321c-aa73-4e3e-5479-024dc811bf24
+  Components:
+    []
+- !<ObjectPrefabAssetData/76f40f0a-4c80-49ff-a719-12800c3598b8>
+  Prototype: !<ObjectOwner/ec152789-c9a2-488a-bac5-2aa9ae7bc871>
+    PackagePath: ""
+    objects:
+      - !<own> 56019aa8-b08a-4180-58a4-a8204d89e7c8
+- !<RenderMeshVisual/89d2e8f3-04fa-44fc-7f80-e9cceda256d0>
+  PrefabRemaps:
+    []
+  Name: Mesh Visual 1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: Caster
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 3f080cb7-8706-4837-9ce8-fdc7005e84d0
+  Mesh: !<reference> 42cb628d-dbc9-4291-85c6-fb57e2281d80
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/a81b505c-b694-4c0e-664b-6ed76632206b>
+  PrefabRemaps:
+    []
+  Name: Butterfly Blue
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.500000, y: 1.500000, z: 1.500000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 74e31acf-55c0-4a11-7f69-c959ddc72eae
+  Components:
+    - !<own> 69a9fef7-a1ed-426d-7962-2f4a3ded0f02
+- !<SceneObject/ac9a09c8-a2d6-459c-64d7-cda5fcd1b141>
+  PrefabRemaps:
+    []
+  Name: Left Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 30.772495, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4755ffec-4273-46ce-6612-101418c9db09
+  Components:
+    []
+- !<SceneObject/b095f5be-d932-4a3d-4026-03fa3d193476>
+  PrefabRemaps:
+    []
+  Name: Left Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 30.772495, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> d4e6dea7-4666-4b67-512f-1187160d4a3b
+  Components:
+    []
+- !<SceneObject/b913d597-88be-4946-6be1-f11a77f210ce>
+  PrefabRemaps:
+    []
+  Name: Scale Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> b095f5be-d932-4a3d-4026-03fa3d193476
+    - !<own> bb9f55a6-a7a1-43b4-68d4-2c5546bb0b99
+  Components:
+    []
+- !<SceneObject/bb9f55a6-a7a1-43b4-68d4-2c5546bb0b99>
+  PrefabRemaps:
+    []
+  Name: Right Anchor
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -27.240053, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> db732ee4-727b-47ff-6512-7cddaa8666ad
+  Components:
+    []
+- !<SceneObject/d4e6dea7-4666-4b67-512f-1187160d4a3b>
+  PrefabRemaps:
+    []
+  Name: Left Wing
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 7.500000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: -90.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 628a27d8-12cc-4586-5271-00393f6c42ef
+- !<ScriptComponent/d715d962-9bb3-4514-59c5-155a0079f961>
+  PrefabRemaps:
+    []
+  Name: Butterfly Controller
+  Enabled: true
+  ScriptAsset: !<reference> be2c013f-c71b-4945-9520-1d92b6848f3a
+  ScriptInputsDefault:
+    movingSpeed: true
+    directionalSpeed: true
+    followStrength: true
+    followRadius: true
+    alwaysAboveGround: true
+    landOnWorldMesh: true
+    avoidCollision: true
+    deviceTracking: true
+    landOnWall: true
+    landOnFloor: true
+    landOnCeiling: true
+    landOnTable: true
+    landOnSeat: true
+    landOnWindow: true
+    landOnDoor: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      spawnOnStart: 20
+      movingSpeed: !<float> 80.000000
+      directionalSpeed: !<float> 10.000000
+      randomSize: !<Vec2> {x: 0.500000, y: 1.300000}
+      followStrength: !<float> 1.000000
+      followRadius: !<float> 50.000000
+      alwaysAboveGround: true
+      landOnWorldMesh: false
+      avoidCollision: false
+      deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
+      landOnWall: false
+      landOnFloor: false
+      landOnCeiling: false
+      landOnTable: true
+      landOnSeat: true
+      landOnWindow: false
+      landOnDoor: false
+      advanced: true
+      objectsToSpawn: !<reference.SceneObject[]>
+        - !<reference> a81b505c-b694-4c0e-664b-6ed76632206b
+        - !<reference> fd3711a1-bff9-4904-532b-c8705bbc20b4
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/db732ee4-727b-47ff-6512-7cddaa8666ad>
+  PrefabRemaps:
+    []
+  Name: Right Wing
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 7.500000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: -90.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1fd7d2e6-4973-41d1-6d0f-7725e8398cc6
+- !<ScriptComponent/f968d52c-4722-45a8-59c1-7cce7dd8c55a>
+  PrefabRemaps:
+    []
+  Name: Butterfly
+  Enabled: true
+  ScriptAsset: !<reference> 37eb7bd3-a017-489f-b7dd-36b2597c1ef7
+  ScriptInputsDefault:
+    addWingMovement: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      addWingMovement: true
+      wingLeft: !<reference.RenderMeshVisual> 628a27d8-12cc-4586-5271-00393f6c42ef
+      wingRight: !<reference.RenderMeshVisual> 1fd7d2e6-4973-41d1-6d0f-7725e8398cc6
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/fd3711a1-bff9-4904-532b-c8705bbc20b4>
+  PrefabRemaps:
+    []
+  Name: Butterfly Orange
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.500000, y: 1.500000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> b913d597-88be-4946-6be1-f11a77f210ce
+  Components:
+    - !<own> f968d52c-4722-45a8-59c1-7cce7dd8c55a

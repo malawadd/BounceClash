@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/7b9d48ab-8961-930f-42af-2611e01849d0>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 37eb7bd3-a017-489f-b7dd-36b2597c1ef7
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 37eb7bd3-a017-489f-b7dd-36b2597c1ef7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: X5FQJmWf60pxs2HWNM7Gt
+  AssetDataMap:
+    JavaScriptAsset: !<own> 7c5f0fff-869b-423e-8b2f-008a03dc219d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/7c5f0fff-869b-423e-8b2f-008a03dc219d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dc6ebe2e-6354-4084-a036-123f04c36ec8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    addWingMovement: false
+    wingLeft: false
+    wingRight: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - addWingMovement: true
+      wingLeft: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      wingRight: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

@@ -1,4 +1,4 @@
-- !<NativePackageDescriptor/23dbd3dd-9563-47ab-aeec-7072afd312b2>
+- !<NativePackageDescriptor/61b109d6-280f-4c01-b6d9-4f30919d4750>
   PackagePath: ""
   StudioVersion:
     major: 5
@@ -21,7 +21,7 @@
   VersionMinor: 0
   VersionPatch: 0
   UpdateCheckpoint: 83
-  ExportUid: 049cf2e0-91ae-49d8-9869-60ea2d37b28c
+  ExportUid: 9cfbbc96-c862-4bbd-b969-b4b1383a5bd7
   ComponentUid: 68d30dc7-e767-47a8-9e84-678255896d64
   PackagePolicy: CanBeUnpackedTransparent
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

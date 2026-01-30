@@ -36,6 +36,7 @@
     pointsPerFall: false
     score: false
     scoreText: false
+    soundPlayer: false
     startButton: false
     timerDuration: false
     timerText: false
@@ -68,6 +69,7 @@
       turnBasedManager: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       userScore: !<reference.Text> 00000000-0000-0000-0000-000000000000
       startButton: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      soundPlayer: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}

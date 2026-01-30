@@ -1,0 +1,79 @@
+- !<AssetImportMetadata/025ea43e-74f0-f304-7bf6-e036396d284c>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> be2c013f-c71b-4945-9520-1d92b6848f3a
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> be2c013f-c71b-4945-9520-1d92b6848f3a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: X5FQJmWf60pxs2HWNM7Gt
+  AssetDataMap:
+    JavaScriptAsset: !<own> 506b513b-c0a4-4b7a-8fde-65386fb8f715
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/506b513b-c0a4-4b7a-8fde-65386fb8f715>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e1a6d2f3-3f39-4406-abe5-e32d9044914f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    advanced: false
+    alwaysAboveGround: false
+    avoidCollision: false
+    deviceTracking: false
+    directionalSpeed: false
+    followRadius: false
+    followStrength: false
+    landOnCeiling: false
+    landOnDoor: false
+    landOnFloor: false
+    landOnSeat: false
+    landOnTable: false
+    landOnWall: false
+    landOnWindow: false
+    landOnWorldMesh: false
+    movingSpeed: false
+    objectsToSpawn: false
+    randomSize: false
+    spawnOnStart: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - spawnOnStart: 30
+      movingSpeed: !<float> 80.000000
+      directionalSpeed: !<float> 10.000000
+      randomSize: !<Vec2> {x: 0.500000, y: 1.000000}
+      followStrength: !<float> 1.000000
+      followRadius: !<float> 50.000000
+      alwaysAboveGround: true
+      landOnWorldMesh: false
+      avoidCollision: false
+      deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
+      landOnWall: false
+      landOnFloor: false
+      landOnCeiling: false
+      landOnTable: true
+      landOnSeat: true
+      landOnWindow: false
+      landOnDoor: false
+      advanced: false
+      objectsToSpawn: !<reference.SceneObject[]>
+        []
+  ScriptTypes:
+    -
+      {}

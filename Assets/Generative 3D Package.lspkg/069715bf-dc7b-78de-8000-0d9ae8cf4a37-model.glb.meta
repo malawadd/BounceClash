@@ -45,7 +45,7 @@
           Level: Medium
     ExtensionMappings:
       mesh: None Compression
-      jpeg: Performance Compression
+      jpeg: None Compression
     Overrides:
       {}
 - !<SceneObject/6e9ba150-45da-4dc9-7662-e9bce585bdbb>

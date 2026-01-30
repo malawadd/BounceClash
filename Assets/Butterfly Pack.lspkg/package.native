@@ -1,0 +1,37 @@
+- !<NativePackageDescriptor/274217d0-a7f1-421a-8f38-bd996307bd0b>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 17
+    patch: 2
+    build: 26011319
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: Butterfly Pack Butterfly model with idle and flying animations. This pack is also provide two different textures for the butterfly. Click here to learn more about Playing 3D Animation Click here to learn more about Materials
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 83
+  ExportUid: e13f325c-e4b8-4aa2-80c7-a5fc93242a4e
+  ComponentUid: 7634250d-6f7d-4eb0-85e9-9ab01c89dac5
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

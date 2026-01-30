@@ -58,6 +58,8 @@
 //@input Component.Text userScore
 //@input Component.Text startButton
 
+// @input Component.ScriptComponent soundPlayer
+
 
 
 // ---------- INTERNAL STATE ----------
@@ -102,6 +104,7 @@ function startGame() {
     }
      script.timerText.getSceneObject().enabled = true;
      script.scoreText.getSceneObject().enabled = true;
+     script.soundPlayer.api.playByIndex(1);
 
     // Disable / hide the start button when game begins
     // if (script.startButton) {
