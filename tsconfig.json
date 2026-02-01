@@ -58,13 +58,13 @@
     "./Assets/**/*.ts",
     "./Packages/**/*.ts",
     "./Cache/TypeScript/Src/Packages/**/*.ts",
-    "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/Tween.lsc/**/*.ts",
     "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/TweenTypes/TweenScreenTransform.lsc/**/*.ts",
     "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/TweenManager.lsc/**/*.ts",
+    "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/Tween.lsc/**/*.ts",
     "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/TweenTypes/TweenColor.lsc/**/*.ts",
     "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/TweenTypes/TweenAlpha.lsc/**/*.ts",
-    "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/TweenTypes/TweenChain.lsc/**/*.ts",
     "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc/**/*.ts",
+    "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/TweenTypes/TweenChain.lsc/**/*.ts",
     "./Cache/TypeScript/Src/Assets/TweenManager.lspkg/Tween/TweenTypes/TweenTransform.lsc/**/*.ts"
   ]
 }
