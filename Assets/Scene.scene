@@ -364,9 +364,9 @@
     top: 1.182144
   Offset:
     left: 0.000000
-    bottom: -0.000019
+    bottom: -0.000057
     right: 0.000000
-    top: -0.000019
+    top: -0.000057
 - !<Image/06560f5a-ee6d-4735-b979-6c1ca1d46b6e>
   PrefabRemaps:
     []
@@ -519,10 +519,10 @@
     right: 1.000000
     top: 1.139509
   Offset:
-    left: -119.071175
-    bottom: -74.435707
-    right: 137.576843
-    top: 62.013298
+    left: -98.923531
+    bottom: -215.275848
+    right: 157.724487
+    top: -78.826851
 - !<SceneObject/0db083f6-6412-425b-9af2-0b9ecafc9008>
   PrefabRemaps:
     []
@@ -564,10 +564,10 @@
   RawMode: true
   ForceBasic: true
   Anchor:
-    left: -0.096384
-    bottom: -0.348681
-    right: 1.275650
-    top: 0.592546
+    left: -0.597009
+    bottom: -0.481651
+    right: 0.754400
+    top: 0.459576
   Offset:
     left: 0.000000
     bottom: 0.000000
@@ -872,10 +872,10 @@
   RawMode: true
   ForceBasic: true
   Anchor:
-    left: -0.672739
-    bottom: 0.137010
-    right: 0.903547
-    top: 0.425613
+    left: -0.687761
+    bottom: 0.208769
+    right: 0.888525
+    top: 0.497372
   Offset:
     left: 0.000000
     bottom: 0.000000
@@ -1944,10 +1944,10 @@
   RawMode: true
   ForceBasic: true
   Anchor:
-    left: -1.033863
-    bottom: -0.350724
-    right: 0.338171
-    top: 0.590503
+    left: -0.615532
+    bottom: -0.273640
+    right: 0.754400
+    top: 0.667587
   Offset:
     left: 0.000000
     bottom: 0.000000
@@ -2747,14 +2747,12 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
-    PUSH
-    ENEMIES
+  Text: "- PUSH ENEMIES"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 20.000000
+  FontSize: 30.000000
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   FontWeight: 400
   Italic: false
@@ -2767,7 +2765,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 0.000000, y: 0.666667, z: 0.000000, w: 1.000000}
+    Color: {x: 0.937255, y: 0.768627, z: 0.498039, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
@@ -2778,7 +2776,7 @@
     Enabled: true
     Fill: !<TextFill>
       Mode: Solid
-      Color: {x: 0.000000, y: 0.333333, z: 0.000000, w: 1.000000}
+      Color: {x: 0.274510, y: 0.149020, z: 0.023529, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
       ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
@@ -4087,14 +4085,12 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
-    USE
-    JOYSTICK
+  Text: "- USE JOYSTICK"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 20.000000
+  FontSize: 30.000000
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   FontWeight: 400
   Italic: false
@@ -4107,7 +4103,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 0.000000, y: 0.666667, z: 0.000000, w: 1.000000}
+    Color: {x: 0.937255, y: 0.768627, z: 0.498039, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
@@ -4118,7 +4114,7 @@
     Enabled: true
     Fill: !<TextFill>
       Mode: Solid
-      Color: {x: 0.000000, y: 0.333333, z: 0.000000, w: 1.000000}
+      Color: {x: 0.274510, y: 0.149020, z: 0.023529, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
       ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
@@ -4458,7 +4454,7 @@
   PrefabRemaps:
     []
   Name: UI
-  Enabled: true
+  Enabled: false
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -5423,14 +5419,12 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
-    DARE
-    FRIENDS
+  Text: "- DARE FRIENDS"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 20.000000
+  FontSize: 30.000000
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   FontWeight: 400
   Italic: false
@@ -5443,7 +5437,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 0.000000, y: 0.666667, z: 0.000000, w: 1.000000}
+    Color: {x: 0.937255, y: 0.768627, z: 0.498039, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
@@ -5454,7 +5448,7 @@
     Enabled: true
     Fill: !<TextFill>
       Mode: Solid
-      Color: {x: 0.000000, y: 0.333333, z: 0.000000, w: 1.000000}
+      Color: {x: 0.274510, y: 0.149020, z: 0.023529, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
       ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
@@ -5979,7 +5973,7 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 30.000000
+  FontSize: 23.000000
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   FontWeight: 400
   Italic: false
@@ -6204,10 +6198,10 @@
   RawMode: true
   ForceBasic: true
   Anchor:
-    left: -0.555933
-    bottom: -0.350724
-    right: 0.816101
-    top: 0.590503
+    left: -0.614225
+    bottom: -0.383485
+    right: 0.757809
+    top: 0.557742
   Offset:
     left: 0.000000
     bottom: 0.000000
