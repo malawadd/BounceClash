@@ -7,21 +7,10 @@
 // Gravity (negative value, cm/s^2)
 // @input float gravity = -300.0
 
-// Start falling when we are "past" this Z (example trigger)
-// Change/remove this once you switch to your own condition.
-// @input bool useZTrigger = true
-// @input float fallStartZ = 150.0 {"showIf":"useZTrigger","showIfValue":true}
-
-// Optional rectangular gap instead of Z trigger
-// @input bool useGap = false
-// @input float gapMinX = -50.0 {"showIf":"useGap","showIfValue":true}
-// @input float gapMaxX = 50.0  {"showIf":"useGap","showIfValue":true}
-// @input float gapMinZ = 100.0 {"showIf":"useGap","showIfValue":true}
-// @input float gapMaxZ = 200.0 {"showIf":"useGap","showIfValue":true}
-
-// Optional kill height
-// @input bool useKillY = false
-// @input float killY = -500.0 {"showIf":"useKillY","showIfValue":true}
+// Enable player falling (mimics NPC behavior)
+// @input bool enableFalling = true
+// @input float fallThreshold = 0.1 {"showIf":"enableFalling","showIfValue":true}
+// @input float fallSpeed = 300.0 {"showIf":"enableFalling","showIfValue":true}
 
 var sphereObj = script.sphere || script.getSceneObject();
 var sphereTransform = sphereObj.getTransform();
@@ -56,39 +45,20 @@ function onUpdate() {
         pos = pos.add(moveDir.uniformScale(script.moveSpeed * dt));
     }
 
-    // ---------- 2) Decide if we should start falling ----------
+    // ---------- 2) Decide if we should start falling (like NPCs) ----------
 
-    // Example A: simple Z trigger
-    if (!isFalling && script.useZTrigger && pos.z > script.fallStartZ) {
+    // Simple check: if Y drops below ground threshold, start falling
+    // This mimics exactly how NPCs fall in MoveTowardsPlayer.js
+    if (script.enableFalling && !isFalling && pos.y < groundY - script.fallThreshold) {
         isFalling = true;
-        verticalVel = 0.0;
-        // print("Start falling: crossed Z trigger");
-    }
-
-    // Example B: rectangular gap
-    if (!isFalling && script.useGap) {
-        var overGap =
-            pos.x > script.gapMinX && pos.x < script.gapMaxX &&
-            pos.z > script.gapMinZ && pos.z < script.gapMaxZ;
-
-        if (overGap) {
-            isFalling = true;
-            verticalVel = 0.0;
-            // print("Start falling: over gap");
-        }
+        print("[PlayerController] Player started falling at Y=" + pos.y.toFixed(1));
     }
 
     // ---------- 3) Vertical motion (grounded vs falling) ----------
 
     if (isFalling) {
-        // gravity
-        verticalVel += script.gravity * dt;
-        pos.y += verticalVel * dt;
-
-        if (script.useKillY && pos.y < script.killY) {
-            pos.y = script.killY;
-            verticalVel = 0.0;
-        }
+        // Fall fast (like NPCs)
+        pos.y -= script.fallSpeed * dt;
     } else {
         // grounded: keep center at initial height
         pos.y = groundY;

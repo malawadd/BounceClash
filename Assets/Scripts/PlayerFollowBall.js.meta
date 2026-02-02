@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/4f052456-d59b-44ed-99d9-07b4a4fd7ec8>
+- !<AssetImportMetadata/d25e4077-4965-44d4-9d83-d023d5134739>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> 7dd4e6f6-ac67-4691-b8e1-c30a359ecd4a
+    JavaScriptAsset: !<reference> 4636d41e-f89e-47e1-9d08-1ae36935757f
   ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> 7dd4e6f6-ac67-4691-b8e1-c30a359ecd4a
+  PrimaryAsset: !<reference> 4636d41e-f89e-47e1-9d08-1ae36935757f
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    JavaScriptAsset: !<own> 7b223e7a-b310-4fb8-a156-7ee0280fa4c6
+    JavaScriptAsset: !<own> 1b11926c-254d-4f42-a343-3c03e0557cbc
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/7b223e7a-b310-4fb8-a156-7ee0280fa4c6>
+- !<ScriptAssetData/1b11926c-254d-4f42-a343-3c03e0557cbc>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -22,17 +22,13 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: b236459d-47d2-4f7f-a5da-9d1e4e9dc0fb
+  ComponentUid: dcf1f112-d3fe-43c1-8ae9-1e327e793ea7
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     enableFalling: false
-    fallSpeed: false
-    fallThreshold: false
-    gravity: false
-    joystick: false
-    moveSpeed: false
-    sphere: false
+    playerBall: false
+    yOffset: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -42,13 +38,9 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - sphere: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      joystick: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      moveSpeed: !<float> 200.000000
-      gravity: !<float> -300.000000
+    - playerBall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       enableFalling: true
-      fallThreshold: 0.100000
-      fallSpeed: !<float> 300.000000
+      yOffset: !<float> 0.000000
   ScriptTypes:
     -
       {}

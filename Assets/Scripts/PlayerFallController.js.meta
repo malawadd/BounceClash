@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/4f052456-d59b-44ed-99d9-07b4a4fd7ec8>
+- !<AssetImportMetadata/7ea6a117-b804-4e9f-b018-3ad66a2c4477>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> 7dd4e6f6-ac67-4691-b8e1-c30a359ecd4a
+    JavaScriptAsset: !<reference> 546867bd-f341-4024-b75c-1d11cf9c5ea3
   ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> 7dd4e6f6-ac67-4691-b8e1-c30a359ecd4a
+  PrimaryAsset: !<reference> 546867bd-f341-4024-b75c-1d11cf9c5ea3
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    JavaScriptAsset: !<own> 7b223e7a-b310-4fb8-a156-7ee0280fa4c6
+    JavaScriptAsset: !<own> 2641144c-c5b6-46aa-85ef-478f36ae6c53
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/7b223e7a-b310-4fb8-a156-7ee0280fa4c6>
+- !<ScriptAssetData/2641144c-c5b6-46aa-85ef-478f36ae6c53>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -22,17 +22,15 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: b236459d-47d2-4f7f-a5da-9d1e4e9dc0fb
+  ComponentUid: d6a14f29-12a6-4dea-8d10-c31603f95586
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    characterController: false
     enableFalling: false
-    fallSpeed: false
     fallThreshold: false
-    gravity: false
-    joystick: false
-    moveSpeed: false
-    sphere: false
+    groundY: false
+    playerBall: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -42,13 +40,11 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - sphere: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      joystick: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      moveSpeed: !<float> 200.000000
-      gravity: !<float> -300.000000
+    - characterController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      playerBall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       enableFalling: true
-      fallThreshold: 0.100000
-      fallSpeed: !<float> 300.000000
+      groundY: !<float> 0.000000
+      fallThreshold: !<float> -5.000000
   ScriptTypes:
     -
       {}
