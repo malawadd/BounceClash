@@ -29,10 +29,13 @@
     GameOverScene: false
     MoveTowardsPlayer: false
     autoStartTimer: false
+    endOnPlayerFall: false
     fallY: false
     gameOverText: false
     npcPoints: false
     npcs: false
+    player: false
+    playerFallY: false
     pointsPerFall: false
     score: false
     scoreText: false
@@ -70,6 +73,9 @@
       userScore: !<reference.Text> 00000000-0000-0000-0000-000000000000
       startButton: !<reference.Text> 00000000-0000-0000-0000-000000000000
       soundPlayer: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      endOnPlayerFall: false
+      player: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      playerFallY: !<float> -10.000000
   ScriptTypes:
     -
       {}
